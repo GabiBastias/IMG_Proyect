@@ -1,0 +1,58 @@
+.divLanding{
+    display: grid;
+    
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.imgProfile{
+    width: 200px;
+    height: 200px;
+    /* filter: hue-rotate(-0.2turn) 
+        invert(1) 
+        saturate(2); */
+    /* filter: brightness(2) 
+        contrast(2) 
+        drop-shadow(0.1rem 0.1rem 0rem rgb(255, 166, 0)) 
+        grayscale(1) 
+        hue-rotate(0.1turn) 
+        invert(1) 
+        saturate(1.1) ; */
+    filter: brightness(2) 
+        contrast(2) 
+        hue-rotate(-0.2turn) 
+        invert(1) 
+        saturate(2) ;
+    border-radius: 50%;
+    transition: .5s;
+    &:hover{
+        filter: none;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+.spanAnimation {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 16ch;
+    animation: typing 2s steps(16),
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
+    text-shadow: 1px 1px 6px rgb(0, 167, 0),
+    1px 1px 6px rgb(0, 167, 0);
+    
+}
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+}
+  
+@keyframes blink {
+    50% { border-color: transparent; }
+}
